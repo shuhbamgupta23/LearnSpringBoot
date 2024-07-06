@@ -1,6 +1,5 @@
 package com.SpringBootWeb.demo.services;
 
-import com.SpringBootWeb.demo.configs.MapperConfig;
 import com.SpringBootWeb.demo.dto.EmployeeDTO;
 import com.SpringBootWeb.demo.entities.EmployeeEntity;
 import com.SpringBootWeb.demo.repositories.EmployeeRepository;
@@ -9,6 +8,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -18,9 +18,8 @@ public class EmployeeService {
     private final EmployeeRepository employeeRepository;
     private final ModelMapper modelMapper;
 
-    public EmployeeDTO getEmployeeById(Long id){
-        EmployeeEntity employeeEntity = employeeRepository.findById(id).orElse(null);
-        return modelMapper.map(employeeEntity, EmployeeDTO.class);
+    public Optional<EmployeeDTO> getEmployeeById(Long id){
+        return employeeRepository.findById(id).map(employeeEntity -> modelMapper.map(employeeEntity, EmployeeDTO.class));
     }
 
     public List<EmployeeDTO> getAllEmployees(){
@@ -37,4 +36,14 @@ public class EmployeeService {
         return modelMapper.map(toSaveEntity,EmployeeDTO.class);
     }
 
+    public EmployeeDTO updateEmployeeById(Long employeeId, EmployeeDTO employeeDTO) {
+        EmployeeEntity employeeEntity = modelMapper.map(employeeDTO, EmployeeEntity.class);
+        employeeEntity.setId(employeeId);
+        EmployeeEntity savedEmployeeEntity = employeeRepository.save(employeeEntity);
+        return modelMapper.map(savedEmployeeEntity, EmployeeDTO.class);
+    }
+
+    public void deleteEmployeeById(Long employeeId) {
+            employeeRepository.deleteById(employeeId);
+    }
 }
