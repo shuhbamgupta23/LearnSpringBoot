@@ -21,12 +21,12 @@ public class EmployeeController {
     }
 
     @GetMapping
-    public List<EmployeeEntity> getAllEmployee(@RequestParam(required = false) Integer age, @RequestParam(required = false) String name){
+    public List<EmployeeDTO> getAllEmployee(@RequestParam(required = false) Integer age, @RequestParam(required = false) String name){
         return employeeService.getAllEmployees();
     }
 
     @PostMapping
-    public EmployeeEntity createEmployee(@RequestBody EmployeeEntity employee){
+    public EmployeeDTO createEmployee(@RequestBody EmployeeEntity employee){
         return employeeService.createEmployee(employee);
     }
 }
