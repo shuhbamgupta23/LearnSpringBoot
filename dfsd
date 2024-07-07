@@ -1,0 +1,29 @@
+[33mcommit bfb4a5d28cf8c4b2c267470181ab3ecd3e45999a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Shubham <mrjanuaryx@gmail.com>
+Date:   Sun Jul 7 11:37:22 2024 +0530
+
+    Added some exceptional handling
+
+[33mcommit 1e555f3a0e3c5c6bd1c6c0e7f2f8a74e775a3ec3[m
+Author: Shubham <mrjanuaryx@gmail.com>
+Date:   Sat Jul 6 18:19:06 2024 +0530
+
+    Validation added
+
+[33mcommit 9c77be9de00a66c45ee3cd5d281c6f4b1a4ea056[m
+Author: Shubham <mrjanuaryx@gmail.com>
+Date:   Sat Jul 6 17:59:27 2024 +0530
+
+    Added some logic for service
+
+[33mcommit 04f9cdc2775cbe4f2829bf570c38f1f8ee4882da[m
+Author: Shubham <mrjanuaryx@gmail.com>
+Date:   Sat Jul 6 15:23:16 2024 +0530
+
+    Added Service Layer
+
+[33mcommit 766f192e41b783f6837cdce2bbe28f3456864aac[m
+Author: Gupta <shubham.gupta6@spglobal.com>
+Date:   Sat Jul 6 14:56:07 2024 +0530
+
+    first commit

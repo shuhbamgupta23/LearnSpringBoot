@@ -9,9 +9,10 @@ import java.util.List;
 @Data
 @Builder
 public class ApiError {
+
     private HttpStatus status;
-    private String errorMessage;
-    private List<String> subError;
+    private String message;
+    private List<String> subErrors;
 
 
 }
