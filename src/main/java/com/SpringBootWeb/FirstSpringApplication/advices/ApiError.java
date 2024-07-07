@@ -1,4 +1,4 @@
-package com.SpringBootWeb.demo.advices;
+package com.SpringBootWeb.FirstSpringApplication.advices;
 
 import lombok.Builder;
 import lombok.Data;

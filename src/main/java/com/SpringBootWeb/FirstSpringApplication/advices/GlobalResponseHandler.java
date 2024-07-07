@@ -1,4 +1,4 @@
-package com.SpringBootWeb.demo.advices;
+package com.SpringBootWeb.FirstSpringApplication.advices;
 
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;

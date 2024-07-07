@@ -1,6 +1,6 @@
-package com.SpringBootWeb.demo.repositories;
+package com.SpringBootWeb.FirstSpringApplication.repositories;
 
-import com.SpringBootWeb.demo.entities.EmployeeEntity;
+import com.SpringBootWeb.FirstSpringApplication.entities.EmployeeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,8 @@
-package com.SpringBootWeb.demo.controllers;
+package com.SpringBootWeb.FirstSpringApplication.controllers;
 
-import com.SpringBootWeb.demo.dto.EmployeeDTO;
-import com.SpringBootWeb.demo.exceptions.ResourceNotFoundException;
-import com.SpringBootWeb.demo.services.EmployeeService;
+import com.SpringBootWeb.FirstSpringApplication.dto.EmployeeDTO;
+import com.SpringBootWeb.FirstSpringApplication.exceptions.ResourceNotFoundException;
+import com.SpringBootWeb.FirstSpringApplication.services.EmployeeService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

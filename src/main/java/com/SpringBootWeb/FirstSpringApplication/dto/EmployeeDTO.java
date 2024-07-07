@@ -1,4 +1,4 @@
-package com.SpringBootWeb.demo.dto;
+package com.SpringBootWeb.FirstSpringApplication.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

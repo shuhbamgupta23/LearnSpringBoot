@@ -1,8 +1,8 @@
-package com.SpringBootWeb.demo.services;
+package com.SpringBootWeb.FirstSpringApplication.services;
 
-import com.SpringBootWeb.demo.dto.EmployeeDTO;
-import com.SpringBootWeb.demo.entities.EmployeeEntity;
-import com.SpringBootWeb.demo.repositories.EmployeeRepository;
+import com.SpringBootWeb.FirstSpringApplication.dto.EmployeeDTO;
+import com.SpringBootWeb.FirstSpringApplication.entities.EmployeeEntity;
+import com.SpringBootWeb.FirstSpringApplication.repositories.EmployeeRepository;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.SpringBootWeb.demo.exceptions;
+package com.SpringBootWeb.FirstSpringApplication.exceptions;
 
 
 public class ResourceNotFoundException extends  RuntimeException{

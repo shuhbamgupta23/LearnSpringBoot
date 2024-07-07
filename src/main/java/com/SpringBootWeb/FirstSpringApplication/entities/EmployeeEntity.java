@@ -1,4 +1,4 @@
-package com.SpringBootWeb.demo.entities;
+package com.SpringBootWeb.FirstSpringApplication.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

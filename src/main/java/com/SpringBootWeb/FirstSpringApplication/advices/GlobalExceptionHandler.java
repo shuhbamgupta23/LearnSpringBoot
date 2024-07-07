@@ -1,6 +1,6 @@
-package com.SpringBootWeb.demo.advices;
+package com.SpringBootWeb.FirstSpringApplication.advices;
 
-import com.SpringBootWeb.demo.exceptions.ResourceNotFoundException;
+import com.SpringBootWeb.FirstSpringApplication.exceptions.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
