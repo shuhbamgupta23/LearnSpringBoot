@@ -2,6 +2,7 @@ package com.SpringBootWeb.demo.controllers;
 
 import com.SpringBootWeb.demo.dto.EmployeeDTO;
 import com.SpringBootWeb.demo.entities.EmployeeEntity;
+import com.SpringBootWeb.demo.exceptions.ResourceNotFoundException;
 import com.SpringBootWeb.demo.services.EmployeeService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -10,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @RestController
@@ -24,8 +26,9 @@ public class EmployeeController {
         Optional<EmployeeDTO> employeeDTO = employeeService.getEmployeeById(employeeID);
       return employeeDTO
               .map(employeeDTO1 -> ResponseEntity.ok(employeeDTO1))
-              .orElse(ResponseEntity.notFound().build());
+              .orElseThrow(()-> new ResourceNotFoundException("Employee not found with id: "+employeeID));
     }
+
 
     @GetMapping
     public ResponseEntity<List<EmployeeDTO>> getAllEmployee(@RequestParam(required = false) Integer age, @RequestParam(required = false) String name){
