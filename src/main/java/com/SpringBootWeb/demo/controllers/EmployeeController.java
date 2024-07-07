@@ -1,7 +1,6 @@
 package com.SpringBootWeb.demo.controllers;
 
 import com.SpringBootWeb.demo.dto.EmployeeDTO;
-import com.SpringBootWeb.demo.entities.EmployeeEntity;
 import com.SpringBootWeb.demo.exceptions.ResourceNotFoundException;
 import com.SpringBootWeb.demo.services.EmployeeService;
 import jakarta.validation.Valid;
@@ -9,9 +8,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @RestController
