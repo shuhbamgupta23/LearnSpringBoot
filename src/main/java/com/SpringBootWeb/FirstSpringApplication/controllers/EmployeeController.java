@@ -5,6 +5,7 @@ import com.SpringBootWeb.FirstSpringApplication.exceptions.ResourceNotFoundExcep
 import com.SpringBootWeb.FirstSpringApplication.services.EmployeeService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
+@NoArgsConstructor
 @RequestMapping("/employees")
 public class EmployeeController {
 
