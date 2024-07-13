@@ -2,21 +2,46 @@ package com.SpringBootWeb.FirstSpringApplication.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.util.Objects;
+import java.util.Set;
 
 @Entity
-@NoArgsConstructor
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
-@Table(name = "department")
+@NoArgsConstructor
+@Table(name = "departments")
 public class DepartmentEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private LocalDateTime createdAt;
-    private Boolean isActive;
+
+    @Column(nullable = false)
+    private String title;
+
+    @OneToOne
+    @JoinColumn(name = "department_manager")
+    private EmployeeEntity manager;
+
+    @OneToMany(mappedBy = "workerDepartment", fetch = FetchType.LAZY)
+    private Set<EmployeeEntity> workers;
+
+    @ManyToMany(mappedBy = "freelanceDepartments")
+    private Set<EmployeeEntity> freelancers;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof DepartmentEntity that)) return false;
+        return Objects.equals(getId(), that.getId()) && Objects.equals(getTitle(), that.getTitle());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getTitle());
+    }
 }

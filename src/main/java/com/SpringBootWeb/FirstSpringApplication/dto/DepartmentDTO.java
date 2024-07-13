@@ -10,12 +10,5 @@ public class DepartmentDTO {
 
     @NotBlank(message = "Name of the department cannot be blank")
     @Size(min = 3, max = 10, message = "Number of characters in name should be in the range: [3, 10]")
-    private String name;
-
-    @NotNull(message = "DepartmentCode cannot be blank")
-    private LocalDateTime createdAt;
-
-    @AssertTrue(message = "Department should be active")
-    @JsonProperty("isActive")
-    private Boolean isActive;
+    private String title;
 }
